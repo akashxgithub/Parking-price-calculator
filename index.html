@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PARKING PRICE CALCULATOR</title>
+    <link rel="stylesheet" href="parking.css">
+</head>
+<body>
+    <div class="all"> <br>
+        <div class="noall">
+    <h1 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"><pre>CAR PARKING PRICE CALCULATOR</pre></h1>
+    <!-- <form name="frm-pin" method="post" action="pin-index.php"></form> -->
+
+    <input type="hidden" name="mode" value="PinRequest">
+    <label class="w3">Number of hours</label> <br> <br> 
+    <select name="totpinrequested" onchange="calculateAmount(this.value)" required style="width: 110px;">
+   <option value="" class="ok">Choose hours</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    </select> <br> <br> 
+    <label for=""><pre style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Price to be paid in rupees</pre> </label>
+    <input class="w3" name="tot_amt" id="tot_amt" type="text" readonly> <br> <br><br> <br>  <br>
+<img src="https://www.nicepng.com/png/full/904-9047378_used-cars-png.png" alt="" height="200x" width="500px">
+</div></div>
+    <script>
+        function calculateAmount(val){
+            let tot_price = val*20 ;
+            let divobj = document.getElementById('tot_amt');
+            divobj.value = tot_price;
+        }
+    </script>
+</body>
+</html>
